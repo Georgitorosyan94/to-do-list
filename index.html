@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>To-Do-List</title>
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="js/main.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body ng-app="myApp" ng-controller="todoCtrl">
+		<div class="container">
+			<div class="container-fluid">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<h1>To-Do <small>List</small></h1>
+						<form role="form" ng-submit="todoAdd()">
+							<input type="text" ng-model="todoInput" class="form-control" placeholder="Your Task" name="task">
+							<button type="submit" class="btn btn btn-primary btn-prop">Add</button>
+						</form>
+						
+					</div>
+					<div class="list-unstyled" ng-repeat="x in todoList" id="todo">
+						<input type="checkbox" ng-checked="all" ng-model="x.done"> <span ng-bind="x.todoText"></span>
+					</div>
+					<p><button ng-click="remove()">Remove marked</button></p>
+				</div>	
+				<div class="col-sm-3"></div>
+			</div>
+		</div>
+	</body>
+
+</html>

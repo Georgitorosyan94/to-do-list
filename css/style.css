@@ -1,0 +1,12 @@
+.form-group {
+    text-align: center;
+    padding-bottom: 25px;
+}
+#todo {
+    margin: 0 auto;
+    width: 500px;
+	margin-bottom:25px;
+}
+.btn-prop{
+	margin-top:10px;
+}
